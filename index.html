@@ -1,0 +1,465 @@
+<!doctype html>
+<html>
+	<head>
+		<title>SR3 Character Creator - Point Buy</title>
+		<link rel='stylesheet' href='style.css' />
+		<script type='text/javascript' src='script.js' defer></script>
+	</head>
+
+	<body>
+		<table id='totals'>
+			<tr>
+				<th>
+					Total
+				</th>
+				<th>
+					<output id='total-overall'>
+						0
+					</output>
+				</th>
+			</tr>
+			<tr>
+				<td>
+					Race
+				</td>
+				<td>
+					<output id='total-race'>
+						0
+					</output>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					Magic
+				</td>
+				<td>
+					<output id='total-magic'>
+						0
+					</output>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					Attributes
+				</td>
+				<td>
+					<output id='total-attributes'>
+						0
+					</output>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					Skills
+				</td>
+				<td>
+					<output id='total-skills'>
+						0
+					</output>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					Resources
+				</td>
+				<td>
+					<output id='total-resources'>
+						0
+					</output>
+				</td>
+			</tr>
+		</table>
+
+		<div class='wrapper'>
+
+			<table id='race'>
+				<tr>
+					<th>
+						x
+					</th>
+					<th>
+						Race
+					</th>
+					<th>
+						Cost
+					</th>
+				</tr>
+				<tr>
+					<td>
+						<input type='radio' name='race' id='race-human' value=0 checked />
+					</td>
+					<td>
+						<label for='race-human'>
+							Human
+						</label>
+					</td>
+					<td>
+						+0
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<input type='radio' name='race' id='race-dwarf_or_ork' value=5 />
+					</td>
+					<td>
+						<label for='race-dwarf_or_ork'>
+							Dwarf or Ork
+						</label>
+					</td>
+					<td>
+						+5
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<input type='radio' name='race' id='race-elf_or_troll' value=10 />
+					</td>
+					<td>
+						<label for='race-elf_or_troll'>
+							Elf or Troll
+						</label>
+					</td>
+					<td>
+						+10
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<input type='radio' name='race' id='race-shapeshifter' value=25 />
+					</td>
+					<td>
+						<label for='race-shapeshifter'>
+							Shapeshifter
+						</label>
+					</td>
+					<td>
+						+25
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<input type='checkbox' name='race' id='race-metavariant' value=5 />
+					</td>
+					<td>
+						<label for='race-metavariant'>
+							Metavariant
+						</label>
+					</td>
+					<td>
+						+5
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<input type='checkbox' name='race' id='race-ghoul' value=10 />
+					</td>
+					<td>
+						<label for='race-ghoul'>
+							Ghoul
+						</label>
+					</td>
+					<td>
+						+10
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<input type='checkbox' name='race' id='race-otaku' value=30 />
+					</td>
+					<td>
+						<label for='race-otaku'>
+							Otaku
+						</label>
+					</td>
+					<td>
+						+30
+					</td>
+				</tr>
+			</table>
+
+			<table id='magic'>
+				<tr>
+					<th>
+						x
+					</th>
+					<th>
+						Magic
+					</th>
+					<th>
+						Cost
+					</th>
+				</tr>
+				<tr>
+					<td>
+						<input type='radio' name='magic' id='magic-unawakened' value=0 checked />
+					</td>
+					<td>
+						<label for='magic-unawakened'>
+							Unawakened
+						</label>
+					</td>
+					<td>
+						+0
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<input type='radio' name='magic' id='magic-full_magician' value=30 />
+					</td>
+					<td>
+						<label for='magic-full_magician'>
+							Full Magician (25 Spell Points)
+						</label>
+					</td>
+					<td>
+						+30
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<input type='radio' name='magic' id='magic-aspected_magician' value=25 />
+					</td>
+					<td>
+						<label for='magic-aspected_magician'>
+							Aspected Magician (35 Spell Points)
+						</label>
+					</td>
+					<td>
+						+25
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<input type='radio' name='magic' id='magic-adept' value=25 />
+					</td>
+					<td>
+						<label for='magic-adept'>
+							Adept (25 Power Points)
+						</label>
+					</td>
+					<td>
+						+25
+					</td>
+				</tr>
+			</table>
+
+			<table id='attributes'>
+				<tr>
+					<th>
+						Attribute
+					</th>
+					<th>
+						Score
+					</th>
+					<th>
+						Cost
+					</th>
+				</tr>
+				<tr>
+					<td>
+						Quickness
+					</td>
+					<td>
+						<input type='number' id='attributes-quickness' name='attributes' min=1 value=1 />
+					</td>
+					<td>
+						<output id='attributes-subtotal-quickness'>
+							2
+						</output>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						Body
+					</td>
+					<td>
+						<input type='number' id='attributes-body' name='attributes' min=1 value=1 />
+					</td>
+					<td>
+						<output id='attributes-subtotal-body'>
+							2
+						</output>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						Strength
+					</td>
+					<td>
+						<input type='number' id='attributes-strength' name='attributes' min=1 value=1 />
+					</td>
+					<td>
+						<output id='attributes-subtotal-strength'>
+							2
+						</output>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						Intelligence
+					</td>
+					<td>
+						<input type='number' id='attributes-intelligence' name='attributes' min=1 value=1 />
+					</td>
+					<td>
+						<output id='attributes-subtotal-intelligence'>
+							2
+						</output>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						Willpower
+					</td>
+					<td>
+						<input type='number' id='attributes-willpower' name='attributes' min=1 value=1 />
+					</td>
+					<td>
+						<output id='attributes-subtotal-willpower'>
+							2
+						</output>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						Charisma
+					</td>
+					<td>
+						<input type='number' id='attributes-charisma' name='attributes' min=1 value=1 />
+					</td>
+					<td>
+						<output id='attributes-subtotal-charisma'>
+							2
+						</output>
+					</td>
+				</tr>
+			</table>
+
+			<table id='skills'>
+				<tr>
+					<th>
+						Skill Points
+					</th>
+					<th>
+						Cost
+					</th>
+				</tr>
+				<tr>
+					<td>
+						<input type='number' id='skills-quantity' min=0 value=1 />
+					</td>
+					<td>
+						<output id='skills-cost'>
+							0
+						</output>
+					</td>
+				</tr>
+			</table>
+
+			<table id='resources'>
+				<tr>
+					<th>
+						x
+					</th>
+					<th>
+						Starting Resources
+					</th>
+					<th>
+						Cost
+					</th>
+				</tr>
+				<tr>
+					<td>
+						<input type='radio' name='resources' id='resources-500' value=-5 />
+					</td>
+					<td>
+						¥500
+					</td>
+					<td>
+						-5
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<input type='radio' name='resources' id='resources-5000' value=0 />
+					</td>
+					<td>
+						¥5000
+					</td>
+					<td>
+						0
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<input type='radio' name='resources' id='resources-20000' value=5 />
+					</td>
+					<td>
+						¥20000
+					</td>
+					<td>
+						5
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<input type='radio' name='resources' id='resources-500' value=10 />
+					</td>
+					<td>
+						¥90000
+					</td>
+					<td>
+						10
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<input type='radio' name='resources' id='resources-200000' value=15 />
+					</td>
+					<td>
+						¥200000
+					</td>
+					<td>
+						15
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<input type='radio' name='resources' id='resources-400000' value=20 />
+					</td>
+					<td>
+						¥400000
+					</td>
+					<td>
+						20
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<input type='radio' name='resources' id='resources-650000' value=25 />
+					</td>
+					<td>
+						¥650000
+					</td>
+					<td>
+						25
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<input type='radio' name='resources' id='resources-1000000' value=30 />
+					</td>
+					<td>
+						¥1000000
+					</td>
+					<td>
+						30
+					</td>
+				</tr>
+			</table>
+
+
+		</div>
+
+	</body>
+</html>

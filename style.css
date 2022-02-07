@@ -1,0 +1,53 @@
+.wrapper {
+	margin-left: 155px;
+	display: inline-block;
+	height: 100%;
+	border-left: 5px inset #ccc;
+	border-bottom: 5px inset #ccc;
+}
+
+#race,
+#magic,
+#attributes,
+#skills,
+#resources,
+
+#race td,
+#magic td,
+#attributes td,
+#skills td,
+#resources td,
+
+#race th,
+#magic th,
+#attributes th,
+#skills th,
+#resources th
+{
+	margin-bottom: 15px;
+	border-collapse: collapse;
+	border: 1px solid black;
+	padding: 13px;
+}
+
+#totals td,
+#totals th
+{
+	margin-left: 100px;
+	margin-bottom: 15px;
+	border-collapse: collapse;
+	border: 1px solid black;
+	padding: 13px;
+}
+
+#totals {
+	position: fixed;
+	border-collapse: collapse;
+	width: 150px;
+}
+
+label,
+input[type='checkbox'],
+input[type='radio'] {
+	cursor: pointer;
+}
